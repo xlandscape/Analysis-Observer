@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Use a specific GitHub action</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for use_github_action {usethis}"><tr><td>use_github_action {usethis}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Use a specific GitHub action</h2>
+
+<h3>Description</h3>
+
+<p>Use a specific action, either one of the example actions from
+<a href="https://github.com/r-lib/actions/tree/master/examples">r-lib/actions/examples</a>
+or a custom action given by the <code>url</code> parameter.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+use_github_action(
+  name,
+  url = NULL,
+  save_as = NULL,
+  ignore = TRUE,
+  open = FALSE
+)
+
+use_github_action_check_release(
+  save_as = "R-CMD-check.yaml",
+  ignore = TRUE,
+  open = FALSE
+)
+
+use_github_action_check_standard(
+  save_as = "R-CMD-check.yaml",
+  ignore = TRUE,
+  open = FALSE
+)
+
+use_github_action_check_full(
+  save_as = "R-CMD-check.yaml",
+  ignore = TRUE,
+  open = FALSE
+)
+
+use_github_action_pr_commands(
+  save_as = "pr-commands.yaml",
+  ignore = TRUE,
+  open = FALSE
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>name</code></td>
+<td>
+<p>Name of the GitHub action, with or without <code>.yaml</code> extension</p>
+</td></tr>
+<tr valign="top"><td><code>url</code></td>
+<td>
+<p>The full URL to the GitHub Actions yaml file.
+By default, the corresponding action in https://github.com/r-lib/actions
+will be used.</p>
+</td></tr>
+<tr valign="top"><td><code>save_as</code></td>
+<td>
+<p>Name of the actions file. Defaults to <code>basename(url)</code>
+for <code>use_github_action()</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>ignore</code></td>
+<td>
+<p>Should the newly created file be added to <code>.Rbuildignore</code>?</p>
+</td></tr>
+<tr valign="top"><td><code>open</code></td>
+<td>
+<p>Open the newly created file for editing? Happens in RStudio, if
+applicable, or via <code><a href="../../utils/html/file.edit.html">utils::file.edit()</a></code> otherwise.</p>
+</td></tr>
+</table>
+
+
+<h3><code>use_github_action_check_release()</code></h3>
+
+<p>This action installs the latest release R version on macOS and runs <code style="white-space: pre;">R CMD check</code>
+via the <a href="https://github.com/r-lib/rcmdcheck">rcmdcheck</a> package.
+</p>
+
+
+<h3><code>use_github_action_check_standard()</code></h3>
+
+<p>This action runs R CMD check
+via the <a href="https://github.com/r-lib/rcmdcheck">rcmdcheck</a> package on the
+three major OSs (linux, macOS and Windows) on the release version of R and
+R-devel. This action is most appropriate when you plan to eventually
+submit your package to CRAN or Bioconductor.
+</p>
+
+
+<h3><code>use_github_action_check_full()</code></h3>
+
+<p>This action installs the last 5 minor R versions and runs R CMD check
+via the <a href="https://github.com/r-lib/rcmdcheck">rcmdcheck</a> package on the
+three major OSs (linux, macOS and Windows). This action is what the
+tidyverse teams uses on their repositories, but is overkill for less
+widely used packages, which are better off using the simpler
+<code>use_github_action_check_release()</code>.
+</p>
+
+
+<h3><code>use_github_action_pr_commands()</code></h3>
+
+<p>This workflow enables the use of 2 R specific commands in pull request
+issue comments. <code style="white-space: pre;">/document</code> will use
+<a href="https://roxygen2.r-lib.org/">roxygen2</a> to rebuild the documentation for
+the package and commit the result to the pull request. <code style="white-space: pre;">/style</code> will use
+<a href="https://styler.r-lib.org/">styler</a> to restyle your package.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><a href="github_actions.html">github_actions</a> for generic workflows.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>usethis</em> version 1.6.1 <a href="00Index.html">Index</a>]</div>
+</body></html>
