@@ -1,0 +1,9 @@
+Comm-class              The Comm
+CommManager-class       The CommManager
+comm_manager            Get global CommManager instance
+installspec             Install the kernelspec to tell Jupyter about
+                        IRkernel.
+jupyter_option_defaults
+                        An R kernel for Jupyter.
+log                     Kernel logging functions
+main                    Initialise and run the kernel
