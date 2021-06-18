@@ -11,6 +11,7 @@ class AnalysisObserver(base.Observer):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.3", "2021-06-18"),
         base.VersionInfo("2.0.2", "2020-12-07"),
         base.VersionInfo("2.0.1", "2020-12-03"),
         base.VersionInfo("2.0.0", "2020-10-22"),
@@ -57,6 +58,7 @@ class AnalysisObserver(base.Observer):
     VERSION.added("2.0.1", "README, LICENSE, CONTRIBUTING")
     VERSION.changed("2.0.2", "Line separators in LICENSE")
     VERSION.changed("2.0.2", "Changelog and README modified")
+    VERSION.changed("2.0.3", "Updated data.table package")
 
     def __init__(self, data, script, output_folder, **keywords):
         super(AnalysisObserver, self).__init__()
