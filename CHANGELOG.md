@@ -1,5 +1,16 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-02-22.
+This is the changelog for the AnalysisObserver.
+
+
+## [2.0.3] - 2021-06-21
+
+### Added
+
+### Changed
+- Updated data.table package
+
+### Fixed
+
 
 ## [2.0.2] - 2020-12-07
 
