@@ -11,6 +11,7 @@ class AnalysisObserver(base.Observer):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.4", "2021-06-25"),
         base.VersionInfo("2.0.3", "2021-06-18"),
         base.VersionInfo("2.0.2", "2020-12-07"),
         base.VersionInfo("2.0.1", "2020-12-03"),
@@ -33,32 +34,33 @@ class AnalysisObserver(base.Observer):
     )
 
     # CHANGELOG
-    VERSION.added("1.1.1", "observer.AnalysisObserver")
-    VERSION.fixed("1.1.2", "observer.AnalysisObserver box-plot labels in RiskAnalysis_Experiment_PEC")
-    VERSION.fixed("1.1.3", "observer.AnalysisObserver spray-drift/run-off co-occurrence only if both data set exist")
-    VERSION.changed("1.1.3", "observer.AnalysisObserver visualization threshold is now defined by median value")
-    VERSION.changed("1.1.6", "observer.AnalysisObserver info worksheet is prepended to Excel worksheet outputs")
-    VERSION.changed("1.2.1", "observer.AnalysisObserver scripts now use option parser for passing parameters")
-    VERSION.changed("1.2.1", "observer.AnalysisObserver scripts can now analyse data sets other than PEC soil")
-    VERSION.changed("1.2.1", "observer.AnalysisObserver scripts modularized")
-    VERSION.changed("1.2.2", "observer.AnalysisObserver do not pass lock keyword to R in AnalysisObserver")
-    VERSION.fixed("1.2.6", "observer.AnalysisObserver R functions for multiple habitat types")
-    VERSION.fixed("1.2.10", "Geo-raster orientations in class observer.AnalysisObserver")
-    VERSION.added("1.2.12", "observer.AnalysisObserver.mc_run_started()")
-    VERSION.changed("1.2.33", "observer.AnalysisObserver no longer requires scripts to be in observer directory")
-    VERSION.changed("1.2.33", "Scripts in class observer.AnalysisObserver directory removed")
-    VERSION.changed("1.2.35", "Update of observer.AnalysisObserver XRisk package to v0.0.0.9003")
-    VERSION.changed("1.2.36", "Removed generic R functions from class observer.AnalysisObserver")
-    VERSION.changed("1.2.38", "Update of observer.AnalysisObserver XRisk package to v0.0.0.9004")
-    VERSION.changed("1.3.13", "observer.AnalysisObserver no longer throws error if output directory exists")
-    VERSION.added("1.3.24", "observer.AnalysisObserver.flush() and observer.AnalysisObserver.write()")
-    VERSION.changed("1.3.24", "observer.AnalysisObserver uses base function to call observer module")
+    VERSION.added("1.1.1", "`observer.AnalysisObserver`")
+    VERSION.fixed("1.1.2", "`observer.AnalysisObserver` box-plot labels in `RiskAnalysis_Experiment_PEC` ")
+    VERSION.fixed("1.1.3", "`observer.AnalysisObserver` spray-drift/run-off co-occurrence only if both data set exist")
+    VERSION.changed("1.1.3", "`observer.AnalysisObserver` visualization threshold defined by median value")
+    VERSION.changed("1.1.6", "`observer.AnalysisObserver` info worksheet prepended to Excel worksheet outputs")
+    VERSION.changed("1.2.1", "`observer.AnalysisObserver` scripts now use option parser for passing parameters")
+    VERSION.changed("1.2.1", "`observer.AnalysisObserver` scripts can now analyse data sets other than PEC soil")
+    VERSION.changed("1.2.1", "`observer.AnalysisObserver` scripts modularized")
+    VERSION.changed("1.2.2", "`observer.AnalysisObserver` do not pass lock keyword to R in `AnalysisObserver` ")
+    VERSION.fixed("1.2.6", "`observer.AnalysisObserver` R functions for multiple habitat types")
+    VERSION.fixed("1.2.10", "Geo-raster orientations in class `observer.AnalysisObserver` ")
+    VERSION.added("1.2.12", "`observer.AnalysisObserver.mc_run_started()` ")
+    VERSION.changed("1.2.33", "`observer.AnalysisObserver` no longer requires scripts to be in observer directory")
+    VERSION.changed("1.2.33", "Scripts in class `observer.AnalysisObserver` directory removed")
+    VERSION.changed("1.2.35", "Update of `observer.AnalysisObserver` `XRisk` package to v0.0.0.9003")
+    VERSION.changed("1.2.36", "Removed generic R functions from class `observer.AnalysisObserver` ")
+    VERSION.changed("1.2.38", "Update of `observer.AnalysisObserver` `XRisk` package to v0.0.0.9004")
+    VERSION.changed("1.3.13", "`observer.AnalysisObserver` no longer throws error if output directory exists")
+    VERSION.added("1.3.24", "`observer.AnalysisObserver`.flush() and observer.AnalysisObserver.write()")
+    VERSION.changed("1.3.24", "`observer.AnalysisObserver` uses base function to call observer module")
     VERSION.changed("2.0.0", "First independent release")
     VERSION.added("2.0.1", "Changelog and release history")
-    VERSION.added("2.0.1", "README, LICENSE, CONTRIBUTING")
-    VERSION.changed("2.0.2", "Line separators in LICENSE")
-    VERSION.changed("2.0.2", "Changelog and README modified")
-    VERSION.changed("2.0.3", "Updated data.table package")
+    VERSION.added("2.0.1", "`README`, `LICENSE`, `CONTRIBUTING` ")
+    VERSION.changed("2.0.2", "Line separators in `LICENSE` ")
+    VERSION.changed("2.0.2", "Changelog and `README` modified")
+    VERSION.changed("2.0.3", "Updated `data.table` package")
+    VERSION.changed("2.0.4", "Updated documentation and use of markdown in changelog")
 
     def __init__(self, data, script, output_folder, **keywords):
         super(AnalysisObserver, self).__init__()

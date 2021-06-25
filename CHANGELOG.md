@@ -1,13 +1,22 @@
 # Changelog
-This is the changelog for the AnalysisObserver.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-06-25.
 
-
-## [2.0.3] - 2021-06-21
+## [2.0.4] - 2021-06-25
 
 ### Added
 
 ### Changed
-- Updated data.table package
+- Updated documentation and use of markdown in changelog
+
+### Fixed
+
+
+## [2.0.3] - 2021-06-18
+
+### Added
+
+### Changed
+- Updated `data.table` package
 
 ### Fixed
 
@@ -17,8 +26,8 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- Line separators in LICENSE
-- Changelog and README modified
+- Line separators in `LICENSE` 
+- Changelog and `README` modified
 
 ### Fixed
 
@@ -27,7 +36,7 @@ This is the changelog for the AnalysisObserver.
 
 ### Added
 - Changelog and release history
-- README, LICENSE, CONTRIBUTING
+- `README`, `LICENSE`, `CONTRIBUTING` 
 
 ### Changed
 
@@ -47,10 +56,10 @@ This is the changelog for the AnalysisObserver.
 ## [1.3.24] - 2020-04-02
 
 ### Added
-- observer.AnalysisObserver.flush() and observer.AnalysisObserver.write()
+- `observer.AnalysisObserver`.flush() and observer.AnalysisObserver.write()
 
 ### Changed
-- observer.AnalysisObserver uses base function to call observer module
+- `observer.AnalysisObserver` uses base function to call observer module
 
 ### Fixed
 
@@ -60,7 +69,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver no longer throws error if output directory exists
+- `observer.AnalysisObserver` no longer throws error if output directory exists
 
 ### Fixed
 
@@ -70,7 +79,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- Update of observer.AnalysisObserver XRisk package to v0.0.0.9004
+- Update of `observer.AnalysisObserver` `XRisk` package to v0.0.0.9004
 
 ### Fixed
 
@@ -80,7 +89,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- Removed generic R functions from class observer.AnalysisObserver
+- Removed generic R functions from class `observer.AnalysisObserver` 
 
 ### Fixed
 
@@ -90,7 +99,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- Update of observer.AnalysisObserver XRisk package to v0.0.0.9003
+- Update of `observer.AnalysisObserver` `XRisk` package to v0.0.0.9003
 
 ### Fixed
 
@@ -100,8 +109,8 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver no longer requires scripts to be in observer directory
-- Scripts in class observer.AnalysisObserver directory removed
+- `observer.AnalysisObserver` no longer requires scripts to be in observer directory
+- Scripts in class `observer.AnalysisObserver` directory removed
 
 ### Fixed
 
@@ -109,7 +118,7 @@ This is the changelog for the AnalysisObserver.
 ## [1.2.12]
 
 ### Added
-- observer.AnalysisObserver.mc\_run\_started()
+- `observer.AnalysisObserver.mc\_run\_started()` 
 
 ### Changed
 
@@ -123,7 +132,7 @@ This is the changelog for the AnalysisObserver.
 ### Changed
 
 ### Fixed
-- Geo-raster orientations in class observer.AnalysisObserver
+- Geo-raster orientations in class `observer.AnalysisObserver` 
 
 
 ## [1.2.6]
@@ -133,7 +142,7 @@ This is the changelog for the AnalysisObserver.
 ### Changed
 
 ### Fixed
-- observer.AnalysisObserver R functions for multiple habitat types
+- `observer.AnalysisObserver` R functions for multiple habitat types
 
 
 ## [1.2.2]
@@ -141,7 +150,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver do not pass lock keyword to R in AnalysisObserver
+- `observer.AnalysisObserver` do not pass lock keyword to R in `AnalysisObserver` 
 
 ### Fixed
 
@@ -151,9 +160,9 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver scripts now use option parser for passing parameters
-- observer.AnalysisObserver scripts can now analyse data sets other than PEC soil
-- observer.AnalysisObserver scripts modularized
+- `observer.AnalysisObserver` scripts now use option parser for passing parameters
+- `observer.AnalysisObserver` scripts can now analyse data sets other than PEC soil
+- `observer.AnalysisObserver` scripts modularized
 
 ### Fixed
 
@@ -163,7 +172,7 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver info worksheet is prepended to Excel worksheet outputs
+- `observer.AnalysisObserver` info worksheet prepended to Excel worksheet outputs
 
 ### Fixed
 
@@ -173,10 +182,10 @@ This is the changelog for the AnalysisObserver.
 ### Added
 
 ### Changed
-- observer.AnalysisObserver visualization threshold is now defined by median value
+- `observer.AnalysisObserver` visualization threshold defined by median value
 
 ### Fixed
-- observer.AnalysisObserver spray-drift/run-off co-occurrence only if both data set exist
+- `observer.AnalysisObserver` spray-drift/run-off co-occurrence only if both data set exist
 
 
 ## [1.1.2]
@@ -186,13 +195,13 @@ This is the changelog for the AnalysisObserver.
 ### Changed
 
 ### Fixed
-- observer.AnalysisObserver box-plot labels in RiskAnalysis\_Experiment\_PEC
+- `observer.AnalysisObserver` box-plot labels in `RiskAnalysis\_Experiment\_PEC` 
 
 
 ## [1.1.1]
 
 ### Added
-- observer.AnalysisObserver
+- `observer.AnalysisObserver`
 
 ### Changed
 

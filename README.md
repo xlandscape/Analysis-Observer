@@ -14,7 +14,7 @@
 
 ## About the project
 The `AnalysisObserver` observes Landscape Model simulation runs and runs an R script within an R environment whenever
-a Monte Carlo run, or an entire experiment is finished. The observer does also contain a copy of [
+a Monte Carlo run, or an entire experiment, is finished. The observer does also contain a copy of [
 FFmpeg](https://ffmpeg.org) for fast rendering of animations.
 
 ### Built with
@@ -28,8 +28,7 @@ information is intended for model developers.
 
 ### Prerequisites
 Make sure you are using the most recent version of the Landscape Model core that is compatible with this 
-`AnalysisObserver` version. It is assumed that the model variant is set up as described in the Landscape Model core 
-`README`.
+`AnalysisObserver` version. The description here assumes a setup as described in the Landscape Model core `README`.
 
 ### Installation
 1. Copy the observer to the `model\variant` folder of the Landscape Model.
@@ -45,13 +44,13 @@ Make sure you are using the most recent version of the Landscape Model core that
 
 
 ## Usage
-The `AnalysisObserver` starts a vanilla instance of the bundled R instance for execution of a specified `Script`. All
-parameters specified within the observer configuration are passed to this script as named key-value command line 
-arguments of the form `--key=value`. All keys are converted to lower-case. The R package `optparse` can be used for 
-parsing these command line arguments. This makes the configuration of the observer very adaptive as the R script 
-developer can specify which arguments are needed for th script, and the model developer can provide these arguments
-through the model configuration. An exception is the two mandatory parameters `Data` and `Output_folder` that are
-passed as unnamed arguments in the given order. An example observer configuration looks like this:
+The `AnalysisObserver` starts a vanilla instance of the bundled R instance for execution of a specified `Script`. The
+observer receives the parameters specified within the observer configuration as named key-value command line 
+arguments of the form `--key=value`. Thereby, automatic conversion of keys to lower-case takes place. The R package 
+`optparse` can be used for parsing these command line arguments. This makes the configuration of the observer very 
+adaptive as the R script developer can specify the arguments needed for the script. The model developer can provide
+these arguments through the model configuration. An exception is the two mandatory parameters `Data` and `Output_folder`
+that are passed as unnamed arguments in the given order. An example configuration looks like this:
 
 ```xml
 <Observer module="AnalysisObserver" class="AnalysisObserver">
@@ -62,7 +61,7 @@ passed as unnamed arguments in the given order. An example observer configuratio
 </Observer>
 ```
 If placed in the `<Observers>` section of the `model\variant\experiment.xml`, a script located in the `model\variant`
-folder (script path is resolved here relative to the `_X3DIR_`, see Landscape Model core `README`) is run after the
+folder (script path resolved relative to the `_X3DIR_`, see Landscape Model core `README`) is run after the
 experiment has finished. `<Data>` (here a folder) and `<Output_folder>` are passed to the script as unnamed command 
 line arguments. Additionally, a named argument `dsname` can be accessed from within the script.
 
@@ -70,9 +69,8 @@ The R scripts can make use of the `xRisk` R package that allows accessing X3df d
 
 
 ## Roadmap
-The `AnalysisObserver` is considered stable and no further development is currently planned. The use of 
-`ReportingElements`, within compositions or within Jupyter notebooks is preferred over the use of the 
-`AnalysisObserver`.
+The `AnalysisObserver` is considered stable with no further development planned. We suggest to use `ReportingElements`, 
+within compositions or within Jupyter notebooks instead.
 
 
 ## Contributing
