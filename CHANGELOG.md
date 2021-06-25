@@ -1,6 +1,16 @@
 # Changelog
 This is the changelog for the AnalysisObserver. It was automatically created on 2021-06-25.
 
+## [2.0.4] - 2021-06-25
+
+### Added
+
+### Changed
+- Updated documentation and use of markdown in changelog
+
+### Fixed
+
+
 ## [2.0.3] - 2021-06-18
 
 ### Added
