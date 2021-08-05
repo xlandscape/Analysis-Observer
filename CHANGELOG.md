@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-06-25.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-08-05.
+
+## [2.0.5] - 2021-08-05
+
+### Added
+
+### Changed
+- Renamed `LICENSE.txt` to `LICENSE` 
+
+### Fixed
+
 
 ## [2.0.4] - 2021-06-25
 
@@ -118,7 +128,7 @@ This is the changelog for the AnalysisObserver. It was automatically created on 
 ## [1.2.12]
 
 ### Added
-- `observer.AnalysisObserver.mc\_run\_started()` 
+- `observer.AnalysisObserver.mc_run_started()` 
 
 ### Changed
 
@@ -195,7 +205,7 @@ This is the changelog for the AnalysisObserver. It was automatically created on 
 ### Changed
 
 ### Fixed
-- `observer.AnalysisObserver` box-plot labels in `RiskAnalysis\_Experiment\_PEC` 
+- `observer.AnalysisObserver` box-plot labels in `RiskAnalysis_Experiment_PEC` 
 
 
 ## [1.1.1]
