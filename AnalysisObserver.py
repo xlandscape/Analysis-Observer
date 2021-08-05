@@ -11,6 +11,7 @@ class AnalysisObserver(base.Observer):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.5", "2021-08-05"),
         base.VersionInfo("2.0.4", "2021-06-25"),
         base.VersionInfo("2.0.3", "2021-06-18"),
         base.VersionInfo("2.0.2", "2020-12-07"),
@@ -61,6 +62,7 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.0.2", "Changelog and `README` modified")
     VERSION.changed("2.0.3", "Updated `data.table` package")
     VERSION.changed("2.0.4", "Updated documentation and use of markdown in changelog")
+    VERSION.changed("2.0.5", "Renamed `LICENSE.txt` to `LICENSE` ")
 
     def __init__(self, data, script, output_folder, **keywords):
         super(AnalysisObserver, self).__init__()
