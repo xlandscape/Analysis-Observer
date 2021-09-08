@@ -72,7 +72,7 @@ class AnalysisObserver(base.Observer):
         self._componentPath = os.path.dirname(__file__)
         self._wd = os.path.dirname(output_folder)
         # noinspection SpellCheckingInspection
-        self._rCall = [os.path.join(self._componentPath, "R-3.5.1", "bin", "x64", "Rscript.exe"), "--vanilla", script]
+        self._rCall = [os.path.join(self._componentPath, "R-4.1.1", "bin", "x64", "Rscript.exe"), "--vanilla", script]
         for key, value in keywords.items():
             if key != "lock":
                 self._rCall.append("--" + key + "=" + value)
