@@ -11,3 +11,5 @@ base.documentation.write_changelog(
     AnalysisObserver.AnalysisObserver.VERSION,
     os.path.join(root_folder, "..", "variant", "AnalysisObserver", "CHANGELOG.md")
 )
+base.documentation.write_contribution_notes(
+    os.path.join(root_folder, "..", "variant", "AnalysisObserver", "CONTRIBUTING.md"))
