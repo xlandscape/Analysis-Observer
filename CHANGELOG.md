@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-08-05.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-09-08.
+
+## [2.1] - 2021-09-08
+
+### Added
+
+### Changed
+- Updated runtime environment to R 4.1.1
+
+### Fixed
+
 
 ## [2.0.5] - 2021-08-05
 
