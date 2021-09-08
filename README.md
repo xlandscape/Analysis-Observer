@@ -18,8 +18,8 @@ a Monte Carlo run, or an entire experiment, is finished. The observer does also 
 FFmpeg](https://ffmpeg.org) for fast rendering of animations.
 
 ### Built with
-* Landscape Model core v1.4.1
-* [R](https://cran.r-project.org) v3.5.1
+* Landscape Model core v1.6.2
+* [R](https://cran.r-project.org) v4.1.1
 
 
 ## Getting Started
