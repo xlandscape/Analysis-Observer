@@ -70,14 +70,14 @@ class AnalysisObserver(base.Observer):
         super(AnalysisObserver, self).__init__()
         script = os.path.abspath(script)
         if not os.path.isfile(script):
-            raise FileNotFoundError('AnalysisObserver script "' + script + '" not found')
+            raise FileNotFoundError(f"AnalysisObserver script '{script}' not found")
         self._componentPath = os.path.dirname(__file__)
         self._wd = os.path.dirname(output_folder)
         # noinspection SpellCheckingInspection
         self._rCall = [os.path.join(self._componentPath, "R-4.1.1", "bin", "x64", "Rscript.exe"), "--vanilla", script]
         for key, value in keywords.items():
             if key != "lock":
-                self._rCall.append("--" + key + "=" + value)
+                self._rCall.append(f"--{key}={value}")
         self._rCall.extend([data, output_folder])
         os.makedirs(output_folder, exist_ok=True)
         return
