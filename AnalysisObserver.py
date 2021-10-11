@@ -11,6 +11,7 @@ class AnalysisObserver(base.Observer):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.1", "2021-10-11"),
         base.VersionInfo("2.1.0", "2021-09-08"),
         base.VersionInfo("2.0.5", "2021-08-05"),
         base.VersionInfo("2.0.4", "2021-06-25"),
@@ -65,19 +66,20 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.0.4", "Updated documentation and use of markdown in changelog")
     VERSION.changed("2.0.5", "Renamed `LICENSE.txt` to `LICENSE` ")
     VERSION.changed("2.1.0", "Updated runtime environment to R 4.1.1")
+    VERSION.changed("2.1.1", "Replaced legacy format strings by f-strings")
 
     def __init__(self, data, script, output_folder, **keywords):
         super(AnalysisObserver, self).__init__()
         script = os.path.abspath(script)
         if not os.path.isfile(script):
-            raise FileNotFoundError('AnalysisObserver script "' + script + '" not found')
+            raise FileNotFoundError(f"AnalysisObserver script '{script}' not found")
         self._componentPath = os.path.dirname(__file__)
         self._wd = os.path.dirname(output_folder)
         # noinspection SpellCheckingInspection
         self._rCall = [os.path.join(self._componentPath, "R-4.1.1", "bin", "x64", "Rscript.exe"), "--vanilla", script]
         for key, value in keywords.items():
             if key != "lock":
-                self._rCall.append("--" + key + "=" + value)
+                self._rCall.append(f"--{key}={value}")
         self._rCall.extend([data, output_folder])
         os.makedirs(output_folder, exist_ok=True)
         return

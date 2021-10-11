@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-09-08.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-11.
+
+## [2.1.1] - 2021-10-11
+
+### Added
+
+### Changed
+- Replaced legacy format strings by f-strings
+
+### Fixed
+
 
 ## [2.1] - 2021-09-08
 
