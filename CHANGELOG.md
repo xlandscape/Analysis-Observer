@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-11.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-12.
+
+## [2.1.2] - 2021-10-12
+
+### Added
+
+### Changed
+- Switched to Google docstring style
+
+### Fixed
+
 
 ## [2.1.1] - 2021-10-11
 
@@ -36,7 +46,7 @@ This is the changelog for the AnalysisObserver. It was automatically created on 
 ### Added
 
 ### Changed
-- Updated documentation and use of markdown in changelog
+- Updated the documentation and started using markdown in changelog
 
 ### Fixed
 
