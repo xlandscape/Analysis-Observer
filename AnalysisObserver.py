@@ -7,6 +7,7 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.2", "2021-10-12"),
         base.VersionInfo("2.1.1", "2021-10-11"),
         base.VersionInfo("2.1.0", "2021-09-08"),
         base.VersionInfo("2.0.5", "2021-08-05"),
@@ -63,6 +64,7 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.0.5", "Renamed `LICENSE.txt` to `LICENSE` ")
     VERSION.changed("2.1.0", "Updated runtime environment to R 4.1.1")
     VERSION.changed("2.1.1", "Replaced legacy format strings by f-strings")
+    VERSION.changed("2.1.2", "Switched to Google docstring style")
 
     def __init__(self, data, script, output_folder, **keywords):
         """
