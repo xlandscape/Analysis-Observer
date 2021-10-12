@@ -1,14 +1,10 @@
-"""
-A observer intended to run analysis R scripts during simulation.
-"""
+"""An observer intended to run analysis R scripts during simulation."""
 import os
 import base
 
 
 class AnalysisObserver(base.Observer):
-    """
-    A observer that runs R scripts.
-    """
+    """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
         base.VersionInfo("2.1.1", "2021-10-11"),
@@ -63,12 +59,21 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.0.2", "Line separators in `LICENSE` ")
     VERSION.changed("2.0.2", "Changelog and `README` modified")
     VERSION.changed("2.0.3", "Updated `data.table` package")
-    VERSION.changed("2.0.4", "Updated documentation and use of markdown in changelog")
+    VERSION.changed("2.0.4", "Updated the documentation and started using markdown in changelog")
     VERSION.changed("2.0.5", "Renamed `LICENSE.txt` to `LICENSE` ")
     VERSION.changed("2.1.0", "Updated runtime environment to R 4.1.1")
     VERSION.changed("2.1.1", "Replaced legacy format strings by f-strings")
 
     def __init__(self, data, script, output_folder, **keywords):
+        """
+        Initializes an AnalysisObserver.
+
+        Args:
+            data: A reference to the input data to be analyzed.
+            script: The file path of the R script run by the AnalysisObserver.
+            output_folder: The folder where outputs of the analysis script should be written to.
+            **keywords: Additional, script-specific arguments for the analysis.
+        """
         super(AnalysisObserver, self).__init__()
         script = os.path.abspath(script)
         if not os.path.isfile(script):
@@ -86,69 +91,35 @@ class AnalysisObserver(base.Observer):
 
     def experiment_finished(self, detail=None):
         """
-        Function that is called when an experiment has finished.
-        :param detail: Additional information.
-        :return: Nothing.
+        Reacts when an experiment is completed.
+
+        Args:
+            detail: Additional details to report.
+
+        Returns:
+             Nothing.
         """
         base.run_process(self._rCall, self._wd, self.default_observer)
-        return
 
     def input_get_values(self, component_input):
         """
-        Function that is called when values are retrieved.
-        :param component_input: The input that delivers values.
-        :return: Nothing.
+        Reacts when values are requested from a component input.
+
+        Args:
+            component_input: The input being requested.
+
+        Returns:
+            Nothing.
         """
-        return
 
     def mc_run_finished(self, detail=None):
         """
-        Function that is called when a Monte Carlo run has finished.
-        :param detail: Additional information.
-        :return: Nothing.
+        Reacts when a Monte Carlo run is finished.
+
+        Args:
+            detail: Additional details to report.
+
+        Returns:
+             Nothing.
         """
         base.run_process(self._rCall, self._wd, self.default_observer)
-        return
-
-    def store_set_values(self, level, store_name, message):
-        """
-        Function that is called when values are saved in a data store.
-        :param level: The level of the message.
-        :param store_name: The name of the data store.
-        :param message: The message itself.
-        :return: Nothing.
-        """
-        return
-
-    def write_message(self, level, message, detail=None):
-        """
-        Sends a generic message to the observer.
-        :param level: The level of the message.
-        :param message: The message itself.
-        :param detail: Additional information.
-        :return: Nothing.
-        """
-        return
-
-    def mc_run_started(self, composition):
-        """
-        Function that is called when a Monte Carlo run starts.
-        :param composition: The composition of the Monte Carlo run.
-        :return: Nothing.
-        """
-        return
-
-    def flush(self):
-        """
-        Flushes the reporter's buffer.
-        :return: Nothing.
-        """
-        return
-
-    def write(self, text):
-        """
-        Writes a text using the reporter.
-        :param text: The text to write.
-        :return: Nothing.
-        """
-        return
