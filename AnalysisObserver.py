@@ -89,7 +89,7 @@ class AnalysisObserver(base.Observer):
                 self._rCall.append(f"--{key}={value}")
         self._rCall.extend([data, output_folder])
         os.makedirs(output_folder, exist_ok=True)
-        return
+        self._env = {"R_LIBS_USER": os.path.join(self._componentPath, "R-4.1.1", "library")}
 
     def experiment_finished(self, detail=None):
         """
@@ -101,7 +101,7 @@ class AnalysisObserver(base.Observer):
         Returns:
              Nothing.
         """
-        base.run_process(self._rCall, self._wd, self.default_observer)
+        base.run_process(self._rCall, self._wd, self.default_observer, self._env)
 
     def input_get_values(self, component_input):
         """
@@ -124,4 +124,4 @@ class AnalysisObserver(base.Observer):
         Returns:
              Nothing.
         """
-        base.run_process(self._rCall, self._wd, self.default_observer)
+        base.run_process(self._rCall, self._wd, self.default_observer, self._env)
