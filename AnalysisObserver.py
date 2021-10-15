@@ -7,6 +7,7 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.3", "2021-10-15"),
         base.VersionInfo("2.1.2", "2021-10-12"),
         base.VersionInfo("2.1.1", "2021-10-11"),
         base.VersionInfo("2.1.0", "2021-09-08"),
@@ -65,6 +66,7 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.1.0", "Updated runtime environment to R 4.1.1")
     VERSION.changed("2.1.1", "Replaced legacy format strings by f-strings")
     VERSION.changed("2.1.2", "Switched to Google docstring style")
+    VERSION.fixed("2.1.3", "Set R module library path")
 
     def __init__(self, data, script, output_folder, **keywords):
         """
@@ -89,7 +91,7 @@ class AnalysisObserver(base.Observer):
                 self._rCall.append(f"--{key}={value}")
         self._rCall.extend([data, output_folder])
         os.makedirs(output_folder, exist_ok=True)
-        return
+        self._env = {"R_LIBS_USER": os.path.join(self._componentPath, "R-4.1.1", "library")}
 
     def experiment_finished(self, detail=None):
         """
@@ -101,7 +103,7 @@ class AnalysisObserver(base.Observer):
         Returns:
              Nothing.
         """
-        base.run_process(self._rCall, self._wd, self.default_observer)
+        base.run_process(self._rCall, self._wd, self.default_observer, self._env)
 
     def input_get_values(self, component_input):
         """
@@ -124,4 +126,4 @@ class AnalysisObserver(base.Observer):
         Returns:
              Nothing.
         """
-        base.run_process(self._rCall, self._wd, self.default_observer)
+        base.run_process(self._rCall, self._wd, self.default_observer, self._env)

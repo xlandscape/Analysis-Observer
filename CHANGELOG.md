@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-12.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-15.
+
+## [2.1.3] - 2021-10-15
+
+### Added
+
+### Changed
+
+### Fixed
+- Set R module library path
+
 
 ## [2.1.2] - 2021-10-12
 
