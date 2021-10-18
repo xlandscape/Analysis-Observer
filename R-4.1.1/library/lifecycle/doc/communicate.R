@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 options(
   # Pretend we're in the lifecycle package
   "lifecycle:::calling_package" = "lifecycle",
-  # suppress last_warnings() message by default
+  # suppress last_lifecycle_warnings() message by default
   "lifecycle_verbosity" = "warning"
 )
 
@@ -25,7 +25,7 @@ lifecycle::deprecate_warn("1.0.0", "fun(old_arg)", "fun(new_arg)")
 #' Add two numbers
 #' 
 #' @description
-#' `r lifecycle::badge("deprecated")
+#' `r lifecycle::badge("deprecated")`
 #' 
 #' This function was deprecated because we realised that it's
 #' a special case of the [sum()] function.
@@ -82,7 +82,7 @@ add_two(1, 2)
 #' Add two numbers
 #' 
 #' @description 
-#' `r lifecycle::badge(deprecated)`
+#' `r lifecycle::badge("deprecated")`
 #' 
 #' `add_two()` was renamed to `number_add()` to create a more
 #' consistent API.

@@ -1,5 +1,6 @@
 closepb	pboptions
 dopb	pboptions
+doshiny	pboptions
 getpb	pboptions
 getTimeAsString	timerProgressBar
 getTimerProgressBar	timerProgressBar

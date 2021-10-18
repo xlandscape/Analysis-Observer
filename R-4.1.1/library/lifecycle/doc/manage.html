@@ -38,6 +38,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -151,13 +152,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: `data_frame()` was deprecated in tibble 1.1.0.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Please use `tibble()` instead.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; This warning is displayed once every 8 hours.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data_frame</span>(<span class="at">a =</span> <span class="st">&quot;apple&quot;</span>, <span class="at">b =</span> <span class="st">&quot;banana&quot;</span>)</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: `data_frame()` was deprecated in tibble 1.1.0.</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Please use `tibble()` instead.</span></span></code></pre></div>
 <p>You’ll notice that the warning only appears the first time we call it — lifecycle only notifies you every 8 hours so it’s not overly disruptive if you’ve used a deprecated function in many places.</p>
-<p>So how do you track down exactly where the warning came from? Firstly, you might notice the deprecation warning message includes the advice to call <code>lifecycle::last_warnings()</code>. That’ll give you a list of all the deprecation warnings that have happened recently:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lifecycle<span class="sc">::</span><span class="fu">last_warnings</span>()</span>
+<p>So how do you track down exactly where the warning came from? Firstly, you might notice the deprecation warning message includes the advice to call <code>lifecycle::last_lifecycle_warnings()</code>. That’ll give you a list of all the deprecation warnings that have happened recently:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lifecycle<span class="sc">::</span><span class="fu">last_lifecycle_warnings</span>()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [[1]]</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;deprecated&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; message: `data_frame()` was deprecated in tibble 1.1.0.</span></span>
@@ -173,7 +174,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data_frame</span>(<span class="at">a =</span> <span class="st">&quot;apple&quot;</span>, <span class="at">b =</span> <span class="st">&quot;banana&quot;</span>)</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: `data_frame()` was deprecated in tibble 1.1.0.</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Please use `tibble()` instead.</span></span></code></pre></div>
-<p>Then use <code>lifecycle::last_warning()</code> or <code>lifecycle::last_warnings()</code> to track down the source.</p>
+<p>Then use <code>lifecycle::last_lifecycle_warnings()</code> to track down the source.</p>
 <p>Alternatively, if you want to be really strict, you can turn all deprecation warnings into errors, forcing you to deal with them immediately:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;lifecycle_verbosity&quot;</span> <span class="ot">=</span> <span class="st">&quot;error&quot;</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data_frame</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">2</span>)</span>

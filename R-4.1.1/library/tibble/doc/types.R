@@ -6,6 +6,7 @@ knitr::opts_chunk$set(
 library(dplyr)
 library(tidyr)
 library(purrr)
+requireNamespace("hms", quietly = TRUE)
 
 ## ----setup--------------------------------------------------------------------
 library(tibble)

@@ -1,4 +1,4 @@
-e28b909699d7b22295d250be706598f2 *DESCRIPTION
+bba93fe7e764b8e847a0de201d391b88 *DESCRIPTION
 8154ea341dd69e7bf745378071dfa613 *INDEX
 8806d406c71a4230d8515037dd4748bd *LICENSE
 de6547eb1088e2f14e4328a9bbd86aa8 *Meta/Rd.rds
@@ -6,7 +6,7 @@ de6547eb1088e2f14e4328a9bbd86aa8 *Meta/Rd.rds
 14be3887435ca19c99ccf5a8de601c53 *Meta/hsearch.rds
 4c789df51d560ebc0eccb0676233023c *Meta/links.rds
 4006bd4c44166cad21a8da72c24c7faa *Meta/nsInfo.rds
-f367f86118aae157b6b01b1234a576ac *Meta/package.rds
+7cd6dfa1fed658a2daf295c4b5698175 *Meta/package.rds
 22ab88c64d65079b19c314f4e0089abf *Meta/vignette.rds
 fb61add1195de9314f5090fc02acb36e *NAMESPACE
 7a59c3689a2c6e57e6389809d80a8f65 *NEWS.md
@@ -26,12 +26,12 @@ ec99290d86bfeca79b1c674e2345d9c7 *help/aliases.rds
 a9c291ed365e38e821fe06a380297d96 *help/figures/README-basic-example-plot-1.png
 7daee4aba14ed5e106dd6e5c010e7229 *help/figures/README-volcano-1.png
 b1b0065382a9ba25acf3d9d848ddaced *help/figures/isoband-logo.png
-0847140dc9ea71ce5707b517d8e51540 *help/isoband.rdb
-4114c1db3e3123069582323739183167 *help/isoband.rdx
-14f6bd64d6dd38d26c087aeeb3b67432 *help/paths.rds
+4bbe035d786856a9b88a88419388fcf4 *help/isoband.rdb
+9f663665945a8de886955e6f0252429a *help/isoband.rdx
+d904bc4790ac4431bce0864c59d41965 *help/paths.rds
 ae9d540619f05a3d834a937c4088f0a3 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
-11a293bd2d24525f870b3cfbf28326f1 *libs/i386/isoband.dll
+4bc6bf251aa5e3cef3a69c9ea5adbfb0 *libs/i386/isoband.dll
 4dd341e97ca6a53a12dcbe23c77f9760 *libs/i386/symbols.rds
-b0913d56d9828441eb8974b6294fde68 *libs/x64/isoband.dll
+dbe8f2b246cc00344264e96f14f74ada *libs/x64/isoband.dll
 ad383cf3a313ca52052bd6a24df439d6 *libs/x64/symbols.rds

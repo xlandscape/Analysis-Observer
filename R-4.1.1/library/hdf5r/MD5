@@ -188,7 +188,7 @@ ca16063c7948a315bde61bd7e391dcee *CWrappers_1.12.0/identify_prototypes.R
 56d33211a0bb227142f58b0279a41327 *CWrappers_1.12.0/injectionCode.R
 61c07fde854bb79d8233dc1f4c7b2429 *CWrappers_1.12.0/order_struct_by_dependency.R
 526fe759a748dae7b9abab9abab2a508 *CWrappers_1.12.0/remove_c_comments.R
-ceb32879b35ed569a64725c1790f877c *DESCRIPTION
+1cca2ab7ae3cb8fc84bb767e2fac2876 *DESCRIPTION
 1fe675a1615def15caca141e32817a5a *HDF5_COPYRIGHTS.txt
 0c88eef9016c2fe9973258db97e906f6 *INDEX
 f5ade800de32701c4bc5ea583795f639 *LICENSE
@@ -197,7 +197,7 @@ f5ade800de32701c4bc5ea583795f639 *LICENSE
 d71795cc95669c07633e3d6b750518c5 *Meta/hsearch.rds
 e79be18d56ba6aaa08e9a3f54e962796 *Meta/links.rds
 bf593e6d2cadf85b289008f27b4e98f3 *Meta/nsInfo.rds
-0c0c33dfd77c5fcb19451be0745fcc26 *Meta/package.rds
+ae71fdf56e04ee08b4381c17e263e931 *Meta/package.rds
 3eeb459ab12833af2bef138c34ad9083 *Meta/vignette.rds
 de01e49024ae6e1220dc451b31d5b75c *NAMESPACE
 64b70eff934551d1ae6816684edfed97 *NEWS.md
@@ -211,14 +211,14 @@ e897d213a85943ddf1ecd6801263ea82 *R/hdf5r.rdx
 28b6e2fc44b22419c138db5b465ac385 *h5ex_t_enum.h5
 2042b6a2d747da58e02c9aab1ab5242a *help/AnIndex
 4d2d043dd90f3468dbb997048d0abf1d *help/aliases.rds
-a11d018e506b47f8cec23aca42897b20 *help/hdf5r.rdb
-e62a242957447f2bd1ed60db4b3c853b *help/hdf5r.rdx
-4f4fdd533588927e8a28264c8fb81067 *help/paths.rds
+0284f27eb2b93916dc00772dedb45ba3 *help/hdf5r.rdb
+4b25542b2ccfbd1323d31c3dadfebe2e *help/hdf5r.rdx
+b04430369c8eadfc4bed7afb1570f3c3 *help/paths.rds
 19a24e8dee104167dd9acbe46a778c63 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
-52083a91d8c34fdb484f727ba630620e *libs/i386/hdf5r.dll
+245f6eb3664ecbbde0f3b1f65528ab35 *libs/i386/hdf5r.dll
 9c0a059c5e9786270343f98a1a478da4 *libs/i386/symbols.rds
-470d0d9c83142ecee53f7a8bd807548e *libs/x64/hdf5r.dll
+19a78cf4d36158cc4f1af7fa7ed00624 *libs/x64/hdf5r.dll
 828840d8850c4a894877651925ce29f6 *libs/x64/symbols.rds
 ebb455a7fd6a8ba9a4e38a25c8f0b686 *m4/ax_compare_version.m4
 594fb1644ac98c65adcbf7b7f8f577af *m4/ax_lib_hdf5.m4

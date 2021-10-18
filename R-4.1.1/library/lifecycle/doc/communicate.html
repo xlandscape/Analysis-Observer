@@ -38,6 +38,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -174,7 +175,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Add two numbers</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; </span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; @description</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; `r lifecycle::badge(&quot;deprecated&quot;)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; `r lifecycle::badge(&quot;deprecated&quot;)`</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; </span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; This function was deprecated because we realised that it&#39;s</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; a special case of the [sum()] function.</span></span></code></pre></div>
@@ -235,8 +236,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Gradual deprecation</h3>
 <p>For particularly important functions, you can choose to add two other stages to the deprecation process:</p>
 <ul>
-<li><p><code>deprecated_soft()</code> is used before <code>deprecated_warn()</code>. This function only warns (a) users who try the feature from the global environment and (b) developers who directly use the feature (when running testthat tests). There is no warning when the deprecated feature is called indirectly by another package — the goal is to ensure that warn only the person who has the power to stop using the deprecated feature.</p></li>
-<li><p><code>deprecated_stop()</code> comes after <code>deprecated_warn()</code> and generates an error instead of a warning. The main benefit over simply removing the function is that the user is informed about the replacement.</p></li>
+<li><p><code>deprecate_soft()</code> is used before <code>deprecate_warn()</code>. This function only warns (a) users who try the feature from the global environment and (b) developers who directly use the feature (when running testthat tests). There is no warning when the deprecated feature is called indirectly by another package — the goal is to ensure that warn only the person who has the power to stop using the deprecated feature.</p></li>
+<li><p><code>deprecate_stop()</code> comes after <code>deprecate_warn()</code> and generates an error instead of a warning. The main benefit over simply removing the function is that the user is informed about the replacement.</p></li>
 </ul>
 <p>If you use these stages you’ll also need a process for bumping the deprecation stage for major and minor releases. We recommend something like this:</p>
 <ol style="list-style-type: decimal">
@@ -251,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Add two numbers</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; </span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; @description </span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; `r lifecycle::badge(deprecated)`</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; `r lifecycle::badge(&quot;deprecated&quot;)`</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; </span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; `add_two()` was renamed to `number_add()` to create a more</span></span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; consistent API.</span></span>
@@ -396,7 +397,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr />
 <ol>
 <li id="fn1"><p>We only use an explicit <code>@description</code> when the description will be multiple paragraphs, as in these examples.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>You can learn more about snapshot testing in <code>vignette(&quot;snapshot&quot;, package = &quot;testthat&quot;)</code>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>You can learn more about snapshot testing in <code>vignette(&quot;snapshotting&quot;, package = &quot;testthat&quot;)</code>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
