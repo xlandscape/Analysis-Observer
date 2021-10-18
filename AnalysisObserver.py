@@ -7,6 +7,7 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.0", "2021-10-18"),
         base.VersionInfo("2.1.3", "2021-10-15"),
         base.VersionInfo("2.1.2", "2021-10-12"),
         base.VersionInfo("2.1.1", "2021-10-11"),
@@ -67,6 +68,9 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.1.1", "Replaced legacy format strings by f-strings")
     VERSION.changed("2.1.2", "Switched to Google docstring style")
     VERSION.fixed("2.1.3", "Set R module library path")
+    VERSION.changed("2.2.0", "Updated R packages")
+    # noinspection SpellCheckingInspection
+    VERSION.changed("2.2.0", "Replaced `rgdal` by `terra` package")
 
     def __init__(self, data, script, output_folder, **keywords):
         """
