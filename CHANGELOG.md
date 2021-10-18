@@ -1,5 +1,16 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-15.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-18.
+
+## [2.2] - 2021-10-18
+
+### Added
+
+### Changed
+- Updated R packages
+- Replaced `rgdal` by `terra` package
+
+### Fixed
+
 
 ## [2.1.3] - 2021-10-15
 
