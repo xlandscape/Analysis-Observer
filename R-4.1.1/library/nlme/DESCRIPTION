@@ -39,5 +39,5 @@ Author: José Pinheiro [aut] (S version),
 Maintainer: R-core <R-core@R-project.org>
 Repository: CRAN
 Date/Publication: 2021-09-07 12:00:04 UTC
-Built: R 4.1.1; x86_64-w64-mingw32; 2021-09-08 10:00:11 UTC; windows
-Archs: x64
+Built: R 4.1.1; x86_64-w64-mingw32; 2021-10-05 19:29:02 UTC; windows
+Archs: i386, x64

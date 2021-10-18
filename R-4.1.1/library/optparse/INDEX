@@ -1,3 +1,4 @@
+IndentedHelpFormatter   Builtin help text formatters
 OptionParser            A function to create an instance of a parser
                         object
 OptionParser-class      Option Parser

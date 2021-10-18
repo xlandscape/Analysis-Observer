@@ -94,24 +94,24 @@ Options:
 <p><strong>bash$ example.R</strong></p>
 <pre><code>writing some verbose output to standard error...
 
--0.062065972053375
-0.47905522006317
--0.328494270649886
-1.211641831471
-0.42301092106521</code></pre>
+0.972205599600757
+-0.358623322310077
+0.0847026277675728
+0.175739548893117
+-1.81032479588441</code></pre>
 <p>Or you can specify your own values.</p>
 <p><strong>bash$ example.R --mean=10 --sd=10 --count=3</strong></p>
 <pre><code>writing some verbose output to standard error...
 
-18.809065642538
-5.29337709847511
-5.64966209470831</code></pre>
+2.49359293962927
+5.77160634887535
+6.38001313341107</code></pre>
 <p>If you remember from the example program that <code>--quiet</code> had <code>action="store_false"</code> and <code>dest="verbose"</code>. This means that <code>--quiet</code> is a switch that turns the <code>verbose</code> option from its default value of <code>TRUE</code> to <code>FALSE</code>. Note how the <code>verbose</code> and <code>quiet</code> options store their value in the exact same variable.</p>
 <p><strong>bash$ example.R --quiet -c 4 --generator="runif"</strong></p>
-<pre><code>0.280531030613929
-0.199097874574363
-0.0360796870663762
-0.417285233037546</code></pre>
+<pre><code>0.62889474327676
+0.630497339181602
+0.715296199778095
+0.471402876311913</code></pre>
 <p>If you specify an illegal flag then <em>optparse</em> will throw an error.</p>
 <p><strong>bash$ example.R --silent -m 5</strong></p>
 <pre><code>Error in getopt_options(object, args) : 
@@ -122,13 +122,13 @@ Execution halted</code></pre>
 <p><strong>bash$ example.R -c 100 -c 2 -c 1000 -c 7</strong></p>
 <pre><code>writing some verbose output to standard error...
 
--1.48222878405123
--0.84631596794254
-0.351000283817853
--0.867256577237166
-0.486031446249512
--1.32244033043135
-0.222268695868458</code></pre>
+-0.39223398826115
+-0.598311567887497
+0.0374801956874364
+-0.293467284650871
+-1.33908744572234
+1.05352228913011
+0.916112771473002</code></pre>
 <p><em>optparse</em> can also recognize positional arguments if <code>parse_args</code> is given the option <code>positional_arguments = c(min_pa, max_pa)</code> where <code>min_pa</code> is the minimum and <code>max_pa</code> is the maximum number of supported positional arguments. (A single numeric corresponds to <code>min_pa == max_pa</code>, <code>TRUE</code> is equivalent to <code>c(0, Inf)</code>, and <code>FALSE</code>, the default, is equivalent to <code>0</code>.) Below we give an example program <em>display_file.R</em>, which is a program that prints out the contents of a single file (the required positional argument, not an optional argument) and which accepts the normal help option as well as an option to add line numbers to the output. Note that the positional arguments need to be placed <em>after</em> the optional arguments.</p>
 <p><strong>bash$ display_file.R --help</strong></p>
 <pre><code>Usage: display_file.R [options] file
