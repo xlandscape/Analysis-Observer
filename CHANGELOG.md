@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-10-18.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-11-05.
+
+## [2.2.1] - 2021-11-05
+
+### Added
+- `IRkernel` to R runtime environment
+
+### Changed
+
+### Fixed
+
 
 ## [2.2] - 2021-10-18
 

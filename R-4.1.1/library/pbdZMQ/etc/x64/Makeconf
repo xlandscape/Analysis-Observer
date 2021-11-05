@@ -1,0 +1,10 @@
+MY_CC = d:/Compiler/rtools40/mingw64/bin/gcc 
+MY_CXX = d:/Compiler/rtools40/mingw64/bin/g++ -std=gnu++11 
+PKG_CPPFLAGS = -I./zmqsrc/include -DWIN
+PKG_CFLAGS = -I./zmqsrc/include
+PKG_CXXFLAGS = -I./zmqsrc/include
+PKG_LIBS = -L./ -lzmq -liphlpapi -lrpcrt4 -lws2_32 -lstdc++ -L"D:/RCompile/recent/R-4.1.1/bin/x64" -lR
+PKG_LIBS_ZMQ = -liphlpapi -lrpcrt4 -lws2_32 -lstdc++ -L"D:/RCompile/recent/R-4.1.1/bin/x64" -lR
+R_ZMQ_INC = zmq/x64/include/
+R_ZMQ_LIB = libs/x64/
+R_XTRA_CPPFLAGS = -I"D:/RCompile/recent/R-4.1.1/include" -DNDEBUG
