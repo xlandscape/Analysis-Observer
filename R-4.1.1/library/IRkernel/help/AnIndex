@@ -1,0 +1,15 @@
+IRkernel-package	IRkernel-package
+Comm	Comm-class
+Comm-class	Comm-class
+CommManager	CommManager-class
+CommManager-class	CommManager-class
+comm_manager	comm_manager
+installspec	installspec
+IRkernel	IRkernel-package
+IRkernel-options	IRkernel-package
+jupyter_option_defaults	IRkernel-package
+log	log
+log_debug	log
+log_error	log
+log_info	log
+main	main
