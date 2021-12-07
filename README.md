@@ -15,7 +15,7 @@
 ## About the project
 The `AnalysisObserver` observes Landscape Model simulation runs and runs an R script within an R environment whenever
 a Monte Carlo run, or an entire experiment, is finished. The observer does also contain a copy of [
-FFmpeg](https://ffmpeg.org) for fast rendering of animations.
+FfMpeg](https://ffmpeg.org) for fast rendering of animations.
 
 ### Built with
 * Landscape Model core v1.6.2
@@ -90,7 +90,7 @@ Sascha Bub - sascha.bub.ext@bayer.com
 * [Apply function progress bars](https://cran.r-project.org/web/packages/pbapply)
 * [data.table](https://cran.r-project.org/web/packages/data.table)
 * [Direct Labels](https://cran.r-project.org/web/packages/directlabels)
-* [FFmpeg](https://ffmpeg.org)
+* [FfMpeg](https://ffmpeg.org)
 * [ggplot2](https://cran.r-project.org/web/packages/ggplot2)
 * [h5](https://cran.r-project.org/web/packages/h5)
 * [matrixStats](https://cran.r-project.org/web/packages/matrxistats)
