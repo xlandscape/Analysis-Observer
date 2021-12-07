@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-11-05.
+This is the changelog for the AnalysisObserver. It was automatically created on 2021-12-07.
+
+## [2.2.2] - 2021-12-07
+
+### Added
+
+### Changed
+- Spell checking of `README` 
+
+### Fixed
+
 
 ## [2.2.1] - 2021-11-05
 
