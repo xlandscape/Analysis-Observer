@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: X3DF data source</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for X3DF {XRisk}"><tr><td>X3DF {XRisk}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>X3DF data source</h2>
+
+<h3>Description</h3>
+
+<p>An <code><a href="../../XRisk/help/X3DF.html">X3DF</a></code> <code><a href="../../R6/help/R6Class.html">R6Class</a></code> represents an indivudal X3DF
+data source.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A <code><a href="../../R6/html/R6Class.html">R6Class</a></code> generator object
+</p>
+
+
+<h3>Details</h3>
+
+<p><code><a href="../../XRisk/help/X3DF.html">X3DF</a></code> classes provide wrappers to individual X3DF data sources
+given their file system location. The datasets contained by the data source
+can be listed and accessed.
+</p>
+
+
+<h3>Methods</h3>
+
+
+<dl>
+<dt><code>new(path)</code></dt><dd><p>Creates a new <code>X3DF</code> class. The <code>path</code>
+specifies the file location of the X3DF dataset.</p>
+</dd>
+<dt><code>close()</code></dt><dd><p>Closes the file handle to the X3DF data source and
+should be called when the work with the data source is finished.</p>
+</dd>
+</dl>
+
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>datasets</code></dt><dd><p>A list of all datasets provided by the data source. Each
+dataset is provided as a <code><a href="../../XRisk/help/X3dfDataset.html">X3dfDataset</a></code>.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>X3DF$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-close"><code>X3DF$close()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-finalize"><code>X3DF$finalize()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-clone"><code>X3DF$clone()</code></a>
+</p>
+</li></ul>
+
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>X3DF$new(path)</pre></div>
+
+
+<hr>
+<a id="method-close"></a>
+
+
+
+<h4>Method <code>close()</code></h4>
+
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>X3DF$close()</pre></div>
+
+
+<hr>
+<a id="method-finalize"></a>
+
+
+
+<h4>Method <code>finalize()</code></h4>
+
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>X3DF$finalize()</pre></div>
+
+
+<hr>
+<a id="method-clone"></a>
+
+
+
+<h4>Method <code>clone()</code></h4>
+
+<p>The objects of this class are cloneable with this method.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>X3DF$clone(deep = FALSE)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>deep</code></dt><dd><p>Whether to make a deep clone.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>XRisk</em> version 0.0.0.9006 <a href="00Index.html">Index</a>]</div>
+</div></body></html>
