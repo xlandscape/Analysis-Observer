@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the AnalysisObserver. It was automatically created on 2021-12-07.
+This is the changelog for the AnalysisObserver. It was automatically created on 2022-01-11.
+
+## [2.2.3] - 2022-11-01
+
+### Added
+- `XRisk` package to runtime environment
+
+### Changed
+
+### Fixed
+
 
 ## [2.2.2] - 2021-12-07
 
