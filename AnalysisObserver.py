@@ -7,6 +7,7 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.3", "2022-11-01"),
         base.VersionInfo("2.2.2", "2021-12-07"),
         base.VersionInfo("2.2.1", "2021-11-05"),
         base.VersionInfo("2.2.0", "2021-10-18"),
@@ -75,6 +76,7 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.2.0", "Replaced `rgdal` by `terra` package")
     VERSION.added("2.2.1", "`IRkernel` to R runtime environment")
     VERSION.changed("2.2.2", "Spell checking of `README` ")
+    VERSION.added("2.2.3", "`XRisk` package to runtime environment")
 
     def __init__(self, data, script, output_folder, **keywords):
         """
