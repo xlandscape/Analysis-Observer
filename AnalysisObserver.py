@@ -78,6 +78,8 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.2.2", "Spell checking of `README` ")
     VERSION.added("2.2.3", "`XRisk` package to runtime environment")
 
+    MODULE = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/README", None)
+
     def __init__(self, data, script, output_folder, **keywords):
         """
         Initializes an AnalysisObserver.
