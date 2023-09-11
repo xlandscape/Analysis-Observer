@@ -7,6 +7,7 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.4", "2023-09-11"),
         base.VersionInfo("2.2.3", "2022-11-01"),
         base.VersionInfo("2.2.2", "2021-12-07"),
         base.VersionInfo("2.2.1", "2021-11-05"),
@@ -77,6 +78,9 @@ class AnalysisObserver(base.Observer):
     VERSION.added("2.2.1", "`IRkernel` to R runtime environment")
     VERSION.changed("2.2.2", "Spell checking of `README` ")
     VERSION.added("2.2.3", "`XRisk` package to runtime environment")
+    VERSION.added("2.2.4", "Module information")
+
+    MODULE = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/README", None)
 
     def __init__(self, data, script, output_folder, **keywords):
         """
