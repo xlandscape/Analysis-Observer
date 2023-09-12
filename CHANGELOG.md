@@ -1,6 +1,6 @@
 # Changelog
 
-This is the changelog for the AnalysisObserver. It was automatically created on 2023-09-11.
+This is the changelog for the AnalysisObserver. It was automatically created on 2023-09-12.
 
 ## [2.2.4] - 2023-09-11
 
