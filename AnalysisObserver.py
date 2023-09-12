@@ -80,7 +80,7 @@ class AnalysisObserver(base.Observer):
     VERSION.added("2.2.3", "`XRisk` package to runtime environment")
     VERSION.added("2.2.4", "Module information")
 
-    MODULE = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/README", None)
+    MODULE = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/README", None, True, "R-4.1.1/doc/NEWS")
 
     def __init__(self, data, script, output_folder, **keywords):
         """
