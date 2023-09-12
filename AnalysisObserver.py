@@ -7,6 +7,8 @@ class AnalysisObserver(base.Observer):
     """An observer that runs R scripts."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.6", "2023-09-12"),
+        base.VersionInfo("2.2.5", "2023-09-12"),
         base.VersionInfo("2.2.4", "2023-09-11"),
         base.VersionInfo("2.2.3", "2022-11-01"),
         base.VersionInfo("2.2.2", "2021-12-07"),
@@ -79,6 +81,10 @@ class AnalysisObserver(base.Observer):
     VERSION.changed("2.2.2", "Spell checking of `README` ")
     VERSION.added("2.2.3", "`XRisk` package to runtime environment")
     VERSION.added("2.2.4", "Module information")
+    VERSION.added("2.2.5", "Creation of repository info during documentation")
+    VERSION.added("2.2.5", "Repository info to R runtime environment")
+    VERSION.changed("2.2.5", "Extended module information for R runtime environment")
+    VERSION.changed("2.2.6", "Updated changelog")
 
     MODULE = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/README", None, True, "R-4.1.1/doc/NEWS")
 
